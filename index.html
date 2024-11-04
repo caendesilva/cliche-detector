@@ -106,7 +106,9 @@
 
         <section class="results" id="results">
             <h2>Results</h2>
-            <div id="cliches-list"></div>
+            <div id="cliches-list">
+                <p class="status-message">Please enter some text to check.</p>
+            </div>
         </section>
     </main>
 
@@ -185,9 +187,12 @@
             const input = document.getElementById('input').value;
             const resultsList = document.getElementById('cliches-list');
             
+            // Clear previous results
+            resultsList.innerHTML = '';
+            
             // Clear results if input is empty
             if (!input.trim()) {
-                resultsList.innerHTML = '<p>Please enter some text to check.</p>';
+                resultsList.innerHTML = '<p class="status-message">Please enter some text to check.</p>';
                 return;
             }
 
@@ -214,7 +219,7 @@
             });
 
             if (found.size === 0) {
-                resultsList.innerHTML = '<p>No cliches found!</p>';
+                resultsList.innerHTML = '<p class="status-message">No cliches found!</p>';
                 return;
             }
 
