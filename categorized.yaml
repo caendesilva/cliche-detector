@@ -1,0 +1,579 @@
+writing_cliches:
+  descriptive:
+    weather:
+      - dark and stormy night
+      - perfect storm
+      - calm before the storm
+      - weather mirroring mood
+      - thunder rolling in the distance
+      - rain falling like bullets
+      - sun peeking through clouds
+      - ominous thunder
+      - angry clouds
+      - crystal clear sky
+
+    physical_appearance:
+      - eyes like pools of water
+      - heart-shaped face
+      - chiseled jaw
+      - flowing locks
+      - feminine curves
+      - muscular build
+      - pearly white teeth
+      - ruby red lips
+      - emerald eyes
+      - raven hair
+      - chocolate brown eyes
+      - porcelain skin
+      - time stood still
+      - alabaster skin
+      - perfect figure
+      - flawless complexion
+      - model-like features
+      - delicate features
+      - strong hands
+      - distinguished gray hair
+
+    emotions:
+      - broken heart
+      - burning passion
+      - butterflies in stomach
+      - cold as ice
+      - dead inside
+      - emotional rollercoaster
+      - feeling blue
+      - heart skipped a beat
+      - heavy heart
+      - hot-headed
+      - seeing red
+      - blood ran cold
+      - stomach in knots
+      - weak in the knees
+      - world came crashing down
+      - heart pounding
+      - frozen with fear
+      - blood boiling
+      - heart racing
+      - breath caught in throat
+
+  plot_devices:
+    beginnings:
+      - waking up
+      - alarm clock buzzing
+      - looking in mirror
+      - new student at school
+      - moving to new town
+      - first day of work
+      - mysterious letter arrival
+      - phone call with bad news
+      - dream sequence
+      - flashback opening
+
+    character_introductions:
+      - checking appearance in mirror
+      - mysterious stranger
+      - new kid in town
+      - rebel without a cause
+      - strong female character
+      - troubled past
+      - dark and mysterious
+      - chosen one
+      - ordinary person in extraordinary situation
+      - amnesia victim
+
+    conflicts:
+      - love triangle
+      - good vs evil
+      - man vs nature
+      - revenge plot
+      - misunderstanding
+      - forbidden love
+      - star-crossed lovers
+      - destiny vs free will
+      - technology gone wrong
+      - power corrupts
+
+    endings:
+      - it was all a dream
+      - happily ever after
+      - twist ending
+      - sacrifice saves all
+      - villain monologue
+      - deus ex machina
+      - circular ending
+      - redemption arc
+      - true love conquers
+      - death of protagonist
+
+  dialogue_tags:
+    basic:
+      - said sadly
+      - exclaimed excitedly
+      - whispered softly
+      - shouted angrily
+      - muttered under breath
+      - questioned curiously
+      - responded quickly
+      - stated firmly
+      - replied nervously
+      - announced proudly
+
+    physical_actions:
+      - nodded head
+      - shrugged shoulders
+      - rolled eyes
+      - raised eyebrow
+      - crossed arms
+      - bit lip
+      - clenched fists
+      - tapped foot
+      - paced floor
+      - ran fingers through hair
+
+  character_types:
+    protagonists:
+      - chosen one
+      - ordinary hero
+      - reluctant hero
+      - natural leader
+      - troubled genius
+      - underdog
+      - perfect person
+      - diamond in rough
+      - lone wolf
+      - born leader
+
+    antagonists:
+      - evil genius
+      - mustache-twirling villain
+      - misunderstood villain
+      - corrupt businessman
+      - mad scientist
+      - evil stepmother
+      - school bully
+      - crime boss
+      - corrupt politician
+      - dark lord
+
+    supporting:
+      - wise mentor
+      - comic relief
+      - loyal sidekick
+      - love interest
+      - quirky best friend
+      - protective parent
+      - strict teacher
+      - mysterious stranger
+      - helpful neighbor
+      - wise old person
+
+  scene_settings:
+    locations:
+      - abandoned warehouse
+      - creepy basement
+      - haunted house
+      - secret laboratory
+      - evil lair
+      - quaint coffee shop
+      - bustling city street
+      - peaceful meadow
+      - dark alley
+      - small town diner
+
+    time_periods:
+      - dark ages
+      - roaring twenties
+      - victorian era
+      - world war two
+      - medieval times
+      - future dystopia
+      - post-apocalyptic world
+      - golden age
+      - prehistoric times
+      - space age
+
+  action_sequences:
+    combat:
+      - time slowed down
+      - world went black
+      - seeing stars
+      - everything went dark
+      - like slow motion
+      - lightning quick
+      - moved like water
+      - fought like demon
+      - unstoppable force
+      - immovable object
+
+    chase:
+      - heart pounding
+      - blood pumping
+      - adrenaline rushing
+      - time standing still
+      - world blurring
+      - wind whipping
+      - feet flying
+      - legs burning
+      - lungs bursting
+      - muscles screaming
+
+  metaphors_similes:
+    common:
+      - quiet as mouse
+      - busy as bee
+      - dead as doornail
+      - pure as snow
+      - quick as lightning
+      - strong as ox
+      - sweet as sugar
+      - white as ghost
+      - wise as owl
+      - cold as ice
+
+    nature:
+      - free as bird
+      - graceful as swan
+      - proud as peacock
+      - sly as fox
+      - strong as lion
+      - swift as deer
+      - tall as tree
+      - wild as wind
+      - fierce as tiger
+      - gentle as lamb
+
+  internal_thoughts:
+    emotions:
+      - heart stopped
+      - breath caught
+      - stomach dropped
+      - mind raced
+      - blood froze
+      - time stopped
+      - world spun
+      - head pounded
+      - pulse quickened
+      - thoughts scattered
+
+    reactions:
+      - couldn't believe eyes
+      - jaw dropped
+      - lost for words
+      - mind went blank
+      - speechless with shock
+      - struck dumb
+      - taken aback
+      - thunderstruck
+      - shell-shocked
+      - dumbfounded
+
+  transitions:
+    time:
+      - meanwhile
+      - later that day
+      - next morning
+      - as time passed
+      - moments later
+      - hours passed
+      - days went by
+      - weeks later
+      - months passed
+      - years later
+
+    scene:
+      - across town
+      - elsewhere
+      - in another place
+      - little did they know
+      - not far away
+      - on the other side
+      - somewhere else
+      - back at the
+      - at that moment
+      - in the meantime
+
+  genre_specific:
+    romance:
+      - love at first sight
+      - meant to be
+      - soul mates
+      - true love
+      - destiny calling
+      - perfect match
+      - opposites attract
+      - fairy tale romance
+      - prince charming
+      - damsel in distress
+
+    mystery:
+      - dark secret
+      - hidden truth
+      - mysterious past
+      - plot twist
+      - shocking revelation
+      - surprise ending
+      - unexpected turn
+      - web of lies
+      - deeper mystery
+      - shocking discovery
+
+    fantasy:
+      - ancient prophecy
+      - chosen one
+      - dark lord
+      - epic quest
+      - magical portal
+      - mystical artifact
+      - powerful wizard
+      - sacred object
+      - special powers
+      - ultimate destiny
+
+    horror:
+      - blood-curdling scream
+      - dark and stormy
+      - deathly silence
+      - evil presence
+      - fog rolling in
+      - full moon
+      - ghostly figure
+      - haunted house
+      - mysterious footsteps
+      - shadows moving
+
+  descriptive_phrases:
+    appearance:
+      - crystal clear
+      - dead tired
+      - deafening silence
+      - pitch black
+      - squeaky clean
+      - stark naked
+      - stone cold
+      - white as sheet
+      - picture perfect
+      - plain as day
+
+    behavior:
+      - cool as cucumber
+      - crazy like fox
+      - dead to world
+      - fit as fiddle
+      - mad as hatter
+      - proud as peacock
+      - quick as flash
+      - sharp as tack
+      - sick as dog
+      - smart as whip
+
+  character_development:
+    growth:
+      - coming of age
+      - finding oneself
+      - learning truth
+      - losing innocence
+      - realizing potential
+      - seeing light
+      - understanding life
+      - discovering purpose
+      - gaining wisdom
+      - reaching maturity
+
+    relationships:
+      - becoming friends
+      - falling in love
+      - finding family
+      - forging bonds
+      - growing apart
+      - healing wounds
+      - making peace
+      - mending fences
+      - rebuilding trust
+      - rekindling love
+
+  world_building:
+    settings:
+      - ancient ruins
+      - bustling city
+      - forgotten realm
+      - hidden world
+      - lost civilization
+      - magical kingdom
+      - modern metropolis
+      - parallel universe
+      - secret society
+      - underground network
+
+    elements:
+      - advanced technology
+      - ancient magic
+      - dark forces
+      - divine power
+      - elemental forces
+      - forbidden knowledge
+      - mysterious energy
+      - natural order
+      - supernatural beings
+      - unknown power
+
+  narrative_devices:
+    exposition:
+      - as you know
+      - back story
+      - flashback sequence
+      - inner monologue
+      - mysterious past
+      - origin story
+      - painful memory
+      - secret history
+      - tragic backstory
+      - untold tale
+
+    conflict:
+      - against all odds
+      - battle of wits
+      - clash of titans
+      - final showdown
+      - impossible choice
+      - internal struggle
+      - moral dilemma
+      - ultimate battle
+      - ultimate sacrifice
+      - moment of truth
+
+    resolution:
+      - all's well
+      - better person
+      - changed forever
+      - happiness found
+      - lesson learned
+      - love conquers
+      - peace at last
+      - redemption achieved
+      - truth revealed
+      - wisdom gained
+
+  emotional_states:
+    positive:
+      - cloud nine
+      - floating air
+      - heart soaring
+      - over moon
+      - seventh heaven
+      - top world
+      - walking sunshine
+      - beyond happy
+      - pure bliss
+      - absolute joy
+
+    negative:
+      - depths despair
+      - heart breaking
+      - lost soul
+      - rock bottom
+      - world ending
+      - darkness consuming
+      - hope lost
+      - spirit broken
+      - will shattered
+      - dreams crushed
+
+  physical_descriptions:
+    features:
+      - angular face
+      - aquiline nose
+      - defined cheekbones
+      - delicate features
+      - firm jaw
+      - perfect teeth
+      - piercing eyes
+      - prominent brow
+      - sculpted lips
+      - strong chin
+
+    expressions:
+      - arched eyebrow
+      - knowing smile
+      - meaningful look
+      - narrowed eyes
+      - raised brow
+      - sidelong glance
+      - slight smirk
+      - stern gaze
+      - tight lips
+      - wry smile
+
+  environmental_descriptions:
+    nature:
+      - autumn leaves
+      - gentle breeze
+      - morning dew
+      - perfect day
+      - rays sunshine
+      - summer heat
+      - winter chill
+      - spring bloom
+      - evening glow
+      - morning mist
+
+    weather:
+      - brewing storm
+      - dark clouds
+      - falling rain
+      - howling wind
+      - light drizzle
+      - rolling thunder
+      - sudden downpour
+      - threatening sky
+      - wild tempest
+      - growing storm
+
+  action_descriptions:
+    movement:
+      - cat-like grace
+      - flowing motion
+      - fluid movement
+      - graceful steps
+      - light feet
+      - quick reflexes
+      - silent movement
+      - smooth action
+      - swift motion
+      - effortless grace
+
+    combat:
+      - blazing speed
+      - deadly accuracy
+      - fierce attack
+      - lightning strike
+      - perfect form
+      - powerful blow
+      - precise strike
+      - quick dodge
+      - rapid response
+      - skilled defense
+
+  dialogue_patterns:
+    openings:
+      - actually
+      - basically
+      - honestly
+      - literally
+      - look
+      - seriously
+      - so
+      - well
+      - whatever
+      - yeah
+
+    responses:
+      - absolutely
+      - exactly
+      - indeed
+      - naturally
+      - obviously
+      - of course
+      - precisely
+      - surely
+      - totally
+      - definitely
