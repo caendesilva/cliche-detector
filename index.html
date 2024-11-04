@@ -94,9 +94,8 @@
         <p>Check your text for common cliches and improve your writing</p>
     </header>
 
-    <div class="warning">
-        Note: You can enter unlimited text, but since cliche detection happens in your browser, 
-        very large texts may slow down or crash the website on slower devices.
+    <div id="performance-warning" class="warning" style="display: none">
+        Note: The text you've entered is quite large. On your device, processing might take longer than usual since it's happening in your browser.
     </div>
 
     <main>
@@ -166,8 +165,23 @@
                 .replace(/…/g, '...');
         }
 
+        function checkDevicePerformance() {
+            // Use hardware concurrency as a rough estimate of processing power
+            const cores = navigator.hardwareConcurrency || 1;
+            return cores >= 4; // Consider 4+ cores as "powerful enough"
+        }
+
+        function updatePerformanceWarning(text) {
+            const warning = document.getElementById('performance-warning');
+            const isLongText = text.length > 10000; // Show warning for texts > 10KB
+            const isLowPower = !checkDevicePerformance();
+
+            warning.style.display = (isLongText && isLowPower) ? 'block' : 'none';
+        }
+
         function detectCliches() {
             const input = document.getElementById('input').value;
+            updatePerformanceWarning(input);
             const resultsList = document.getElementById('cliches-list');
             resultsList.innerHTML = '';
 
@@ -213,6 +227,11 @@
                 resultsList.appendChild(div);
             });
         }
+
+        // Add input event listener to check text length while typing
+        document.getElementById('input').addEventListener('input', function() {
+            updatePerformanceWarning(this.value);
+        });
     </script>
 </body>
 </html>
