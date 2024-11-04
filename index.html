@@ -161,15 +161,43 @@
         let cliches = [];
         let isHighPerformanceDevice;
 
-        // Load cliches from YAML file
-        fetch('datasets/cliches.yml')
-            .then(response => response.text())
-            .then(yaml => {
-                // Simple YAML parser for array format
+        // Add cache handling for dataset
+        async function loadCliches() {
+            try {
+                // Try to load from cache first
+                const cachedData = localStorage.getItem('clichesData');
+                const cacheTimestamp = localStorage.getItem('clichesTimestamp');
+                
+                // Check if we have valid cached data less than 24 hours old
+                if (cachedData && cacheTimestamp) {
+                    const cacheAge = Date.now() - parseInt(cacheTimestamp);
+                    if (cacheAge < 24 * 60 * 60 * 1000) { // 24 hours
+                        cliches = JSON.parse(cachedData);
+                        return;
+                    }
+                }
+
+                // Fetch fresh data if no cache or cache expired
+                const response = await fetch('datasets/cliches.yml');
+                if (!response.ok) throw new Error('Failed to load dataset');
+                
+                const yaml = await response.text();
                 cliches = yaml.split('\n')
                     .filter(line => line.startsWith('- '))
                     .map(line => line.substring(2).replace(/^"/, '').replace(/"$/, ''));
-            });
+                
+                // Update cache
+                localStorage.setItem('clichesData', JSON.stringify(cliches));
+                localStorage.setItem('clichesTimestamp', Date.now().toString());
+            } catch (error) {
+                console.error('Failed to load cliches dataset:', error);
+                document.getElementById('cliches-list').innerHTML = `
+                    <div class="warning">
+                        Error: Failed to load the cliches dataset. Please try refreshing the page.
+                        If the problem persists, the service may be temporarily unavailable.
+                    </div>`;
+            }
+        }
 
         function normalizeText(text) {
             return text.toLowerCase()
@@ -262,9 +290,10 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', async () => {
             isHighPerformanceDevice = checkDevicePerformance();
             updatePerformanceWarning(document.getElementById('input').value);
+            await loadCliches();
         });
     </script>
 </body>
