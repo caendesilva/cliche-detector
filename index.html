@@ -101,7 +101,7 @@
     <main>
         <section class="input-section">
             <textarea id="input" placeholder="Enter your text here..."></textarea>
-            <button onclick="detectCliches()">Check for Cliches</button>
+            <button id="check-button" onclick="detectCliches()" style="display: none;">Check for Cliches</button>
         </section>
 
         <section class="results" id="results">
@@ -147,6 +147,7 @@
 
     <script>
         let cliches = [];
+        let debounceTimer;
 
         // Load cliches from YAML file
         fetch('cliches.yml')
@@ -166,25 +167,25 @@
         }
 
         function checkDevicePerformance() {
-            // Use hardware concurrency as a rough estimate of processing power
             const cores = navigator.hardwareConcurrency || 1;
-            return cores >= 4; // Consider 4+ cores as "powerful enough"
+            return cores >= 4;
         }
 
         function updatePerformanceWarning(text) {
             const warning = document.getElementById('performance-warning');
-            const isLongText = text.length > 10000; // Show warning for texts > 10KB
+            const button = document.getElementById('check-button');
+            const isLongText = text.length > 10000;
             const isLowPower = !checkDevicePerformance();
 
             warning.style.display = (isLongText && isLowPower) ? 'block' : 'none';
+            button.style.display = isLowPower ? 'block' : 'none';
         }
 
         function detectCliches() {
             const input = document.getElementById('input').value;
-            updatePerformanceWarning(input);
             const resultsList = document.getElementById('cliches-list');
-            resultsList.innerHTML = '';
-
+            
+            // Clear results if input is empty
             if (!input.trim()) {
                 resultsList.innerHTML = '<p>Please enter some text to check.</p>';
                 return;
@@ -228,9 +229,24 @@
             });
         }
 
-        // Add input event listener to check text length while typing
-        document.getElementById('input').addEventListener('input', function() {
-            updatePerformanceWarning(this.value);
+        // Setup input handlers
+        const inputElement = document.getElementById('input');
+        
+        function debouncedDetectCliches() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                detectCliches();
+            }, 300); // Wait 300ms after last keystroke before running analysis
+        }
+
+        inputElement.addEventListener('input', function() {
+            const text = this.value;
+            updatePerformanceWarning(text);
+            
+            // If device is powerful enough, use live updates
+            if (checkDevicePerformance()) {
+                debouncedDetectCliches();
+            }
         });
     </script>
 </body>
