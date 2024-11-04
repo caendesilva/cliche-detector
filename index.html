@@ -160,6 +160,7 @@
     <script>
         let cliches = [];
         let debounceTimer;
+        let isHighPerformanceDevice;
 
         // Load cliches from YAML file
         fetch('datasets/cliches.yml')
@@ -187,10 +188,9 @@
             const warning = document.getElementById('performance-warning');
             const button = document.getElementById('check-button');
             const isLongText = text.length > 10000;
-            const isLowPower = !checkDevicePerformance();
-
-            warning.style.display = (isLongText && isLowPower) ? 'block' : 'none';
-            button.style.display = isLowPower ? 'block' : 'none';
+            
+            warning.style.display = (isLongText && !isHighPerformanceDevice) ? 'block' : 'none';
+            button.style.display = isHighPerformanceDevice ? 'none' : 'block';
         }
 
         function detectCliches() {
@@ -269,13 +269,18 @@
         }
 
         inputElement.addEventListener('input', function() {
+            console.debug('Input event');   
             const text = this.value;
             updatePerformanceWarning(text);
             
-            // If device is powerful enough, use live updates
-            if (checkDevicePerformance()) {
+            if (isHighPerformanceDevice) {
                 debouncedDetectCliches();
             }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            isHighPerformanceDevice = checkDevicePerformance();
+            updatePerformanceWarning(document.getElementById('input').value);
         });
     </script>
 </body>
