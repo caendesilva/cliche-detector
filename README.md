@@ -52,3 +52,31 @@ Develop a simple, client-side website that helps users identify cliches in their
 *   **Accessibility:** Follow accessibility best practices to make the site usable for everyone.
 
 This design specification provides a comprehensive guide for developing the cliche detector website. It outlines the key features, technical requirements, and content guidelines to ensure a successful implementation.
+
+---
+
+## Sample Text for The Cliche Detector
+
+```
+It was the best of times, it was the worst of times. The calm before the storm had settled over the city, but everyone knew it wouldn't last.
+
+He was caught between a rock and a hard place, with no easy way out.
+
+She was the apple of his eye, but their relationship was on the rocks.
+
+He decided to take the bull by the horns and face his problems head-on.
+
+In the end, good triumphed over evil, proving that what goes around comes around.
+
+He knew he had to make a decision, but he was afraid of making the wrong choice.
+
+After all, hindsight is 20/20.
+
+He thought about it long and hard, but he was still at a crossroads.
+
+Finally, he decided to follow his heart.
+
+He knew it wouldn't be easy, but he was determined to make the best of a bad situation.
+
+And as the sun set on the horizon, he took a deep breath and stepped into the unknown.
+```
