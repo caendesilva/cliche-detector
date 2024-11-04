@@ -100,6 +100,25 @@
             border-top: 1px solid var(--gray-200);
             color: var(--gray-700);
         }
+
+        .toolbar {
+            display: flex;
+            gap: 0.5rem;
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .toolbar button {
+            padding: 0.5rem 0.75rem;
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        .toolbar button:hover {
+            background: var(--gray-200);
+        }
     </style>
 </head>
 <body>
@@ -115,6 +134,14 @@
     <main>
         <section class="input-section">
             <textarea id="input" placeholder="Enter your text here..." autofocus></textarea>
+            <menu class="toolbar">
+                <button onclick="handlePaste()" title="Paste from clipboard">
+                    📋 Paste
+                </button>
+                <button onclick="handleLoadExample()" title="Load example text">
+                    📝 Load Example
+                </button>
+            </menu>
             <button id="check-button" onclick="detectCliches()" style="display: none;">Check for Cliches</button>
         </section>
 
@@ -278,6 +305,57 @@
             updatePerformanceWarning(document.getElementById('input').value);
             await loadCliches();
         });
+
+        async function handlePaste() {
+            const textarea = document.getElementById('input');
+            if (textarea.value && !confirm('This will replace the current content. Continue?')) {
+                return;
+            }
+            
+            try {
+                const text = await navigator.clipboard.readText();
+                textarea.value = text;
+                if (isHighPerformanceDevice) {
+                    detectCliches();
+                }
+            } catch (err) {
+                alert('Unable to read clipboard. Please paste manually.');
+            }
+        }
+
+        function handleLoadExample() {
+            const textarea = document.getElementById('input');
+            if (textarea.value && !confirm('This will replace the current content. Continue?')) {
+                return;
+            }
+
+            const exampleText = `It was the best of times, it was the worst of times. The calm before the storm had settled over the city, but everyone knew it wouldn't last.
+
+He was caught between a rock and a hard place, with no easy way out.
+
+She was the apple of his eye, but their relationship was on the rocks.
+
+He decided to take the bull by the horns and face his problems head-on.
+
+In the end, good triumphed over evil, proving that what goes around comes around.
+
+He knew he had to make a decision, but he was afraid of making the wrong choice.
+
+After all, hindsight is 20/20.
+
+He thought about it long and hard, but he was still at a crossroads.
+
+Finally, he decided to follow his heart.
+
+He knew it wouldn't be easy, but he was determined to make the best of a bad situation.
+
+And as the sun set on the horizon, he took a deep breath and stepped into the unknown.
+`;
+            textarea.value = exampleText;
+            if (isHighPerformanceDevice) {
+                detectCliches();
+            }
+        }
     </script>
 </body>
 </html>
