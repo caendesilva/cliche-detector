@@ -159,7 +159,6 @@
 
     <script>
         let cliches = [];
-        let debounceTimer;
         let isHighPerformanceDevice;
 
         // Load cliches from YAML file
@@ -260,13 +259,6 @@
 
         // Setup input handlers
         const inputElement = document.getElementById('input');
-        
-        function debouncedDetectCliches() {
-            clearTimeout(debounceTimer);
-            debounceTimer = setTimeout(() => {
-                detectCliches();
-            }, 300); // Wait 300ms after last keystroke before running analysis
-        }
 
         inputElement.addEventListener('input', function() {
             console.debug('Input event');   
@@ -274,7 +266,7 @@
             updatePerformanceWarning(text);
             
             if (isHighPerformanceDevice) {
-                debouncedDetectCliches();
+                detectCliches();
             }
         });
 
