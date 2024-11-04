@@ -161,23 +161,8 @@
         let cliches = [];
         let isHighPerformanceDevice;
 
-        // Add cache handling for dataset
         async function loadCliches() {
             try {
-                // Try to load from cache first
-                const cachedData = localStorage.getItem('clichesData');
-                const cacheTimestamp = localStorage.getItem('clichesTimestamp');
-                
-                // Check if we have valid cached data less than 24 hours old
-                if (cachedData && cacheTimestamp) {
-                    const cacheAge = Date.now() - parseInt(cacheTimestamp);
-                    if (cacheAge < 24 * 60 * 60 * 1000) { // 24 hours
-                        cliches = JSON.parse(cachedData);
-                        return;
-                    }
-                }
-
-                // Fetch fresh data if no cache or cache expired
                 const response = await fetch('datasets/cliches.yml');
                 if (!response.ok) throw new Error('Failed to load dataset');
                 
@@ -185,10 +170,6 @@
                 cliches = yaml.split('\n')
                     .filter(line => line.startsWith('- '))
                     .map(line => line.substring(2).replace(/^"/, '').replace(/"$/, ''));
-                
-                // Update cache
-                localStorage.setItem('clichesData', JSON.stringify(cliches));
-                localStorage.setItem('clichesTimestamp', Date.now().toString());
             } catch (error) {
                 console.error('Failed to load cliches dataset:', error);
                 document.getElementById('cliches-list').innerHTML = `
