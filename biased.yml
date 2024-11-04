@@ -1,0 +1,23 @@
+# Many idioms and proverbs reflect the biases and societal norms of the time they were created. 
+# It's important to note that the level of bias perceived can depend on the context and individual interpretation.
+# However, being aware of the potential for harm allows for more conscious and inclusive language choices.
+
+gender:
+  - "Diamonds are a girl's best friend": "Reinforces the stereotype that women are materialistic and focused on wealth."
+  - "Drama queen": "A term often used dismissively towards women, implying they are overly emotional or prone to exaggeration."
+
+racial_ethnic:
+  - "Asia's finest": "While seemingly complimentary, it can be othering and exoticizing, suggesting that people from Asia are a monolithic group with a single 'finest' representative."
+  - "Gyp the system": "'Gyp' is derived from 'Gypsy,' and using it perpetuates negative stereotypes about the Romani people."
+
+other:
+  - "Alabaster skin": "These phrases idealize whiteness as the standard of beauty."
+  - "Porcelain skin": "These phrases idealize whiteness as the standard of beauty."
+  - "Blind leading the blind": "Uses disability as a metaphor for incompetence."
+  - "All's quiet on the western front": "While a historical reference, it could be insensitive to those who have experienced war or have connections to the specific conflict."
+  - "Beggars can't be choosers": "Dismissive of people in poverty, suggesting they should be grateful for anything they receive and not have preferences."
+  - "It ain't over 'til the fat lady sings": "Relies on a harmful stereotype about body size."
+  - "Life's a bitch": "Uses derogatory language and promotes a negative outlook."
+  - "No rest for the wicked": "Implies that anyone who is not resting is morally bad."
+  - "Off one's rocker": "Equates mental health struggles with being crazy or out of control."
+  - "Lose your marbles": "Equates mental health struggles with being crazy or out of control."
