@@ -198,6 +198,10 @@
             const input = document.getElementById('input').value;
             const resultsList = document.getElementById('cliches-list');
 
+            let startTime = performance.now();
+
+            console.debug('Starting detection');
+
             // Clear previous results
             resultsList.innerHTML = '';
             
@@ -234,6 +238,8 @@
             if (found.size === 0) {
                 resultsList.innerHTML = '<p class="status-message">No cliches found!</p>';
                 container.classList.remove('processing');
+
+                console.debug(`Processing time: ${performance.now() - startTime}ms`);
                 return;
             }
 
@@ -248,6 +254,8 @@
             });
 
             container.classList.remove('processing');
+
+            console.debug(`Processing time: ${performance.now() - startTime}ms`);
         }
 
         // Setup input handlers
