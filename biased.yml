@@ -5,10 +5,15 @@
 gender:
   - "Diamonds are a girl's best friend": "Reinforces the stereotype that women are materialistic and focused on wealth."
   - "Drama queen": "A term often used dismissively towards women, implying they are overly emotional or prone to exaggeration."
+  - "A chip on your shoulder": "Implies someone is holding a grudge or easily offended, often dismissing their feelings."
+  - "Dumb as a box of rocks": "Uses ableist language to describe someone as unintelligent."
+  - "Didn't get out of bed on the right side": "Blames someone's mood on a trivial action, potentially dismissing underlying mental health concerns."
 
 racial_ethnic:
   - "Asia's finest": "While seemingly complimentary, it can be othering and exoticizing, suggesting that people from Asia are a monolithic group with a single 'finest' representative."
   - "Gyp the system": "'Gyp' is derived from 'Gypsy,' and using it perpetuates negative stereotypes about the Romani people."
+  - "Call a spade a spade": "While meaning to speak plainly, the word 'spade' has been used as a racial slur, making it potentially offensive."
+  - "Blood is thicker than water": "Prioritizes family loyalty, which can justify harmful actions within families."
 
 other:
   - "Alabaster skin": "These phrases idealize whiteness as the standard of beauty."
@@ -21,3 +26,9 @@ other:
   - "No rest for the wicked": "Implies that anyone who is not resting is morally bad."
   - "Off one's rocker": "Equates mental health struggles with being crazy or out of control."
   - "Lose your marbles": "Equates mental health struggles with being crazy or out of control."
+  - "A dog-eat-dog world": "Suggests a ruthlessly competitive environment, promoting a negative worldview."
+  - "A slap on the wrist": "Refers to a mild punishment, which can be insensitive in serious cases."
+  - "All's fair in love and war": "Suggests unethical actions are justifiable in love or conflict, excusing harmful behavior."
+  - "Cakewalk": "Means something easy, but its origins in a pre-Civil War dance can be insensitive."
+  - "Curiosity killed the cat": "Discourages inquisitiveness, which can be a harmful message."
+  - "Every cloud has a silver lining": "Encourages positivity in hardship, which can be insensitive to those facing trauma."
